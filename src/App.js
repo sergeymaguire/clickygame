@@ -3,7 +3,6 @@ import Card from "./components/Card";
 import Wrapper from "./components/Wrapper";
 import Header from "./components/Header";
 import cards from "./cards.json";
-import "./App.css";
 
 class App extends Component {
   state = {
@@ -30,8 +29,8 @@ class App extends Component {
     this.state.cards.find((o, i) => {
       if (o.id === id) {
         if(cards[i].count === 0){
-          cards[i].count = cards[i].count + 1;
-          this.setState({score : this.state.score + 1}, function(){
+          cards[i].count = cards[i].count + 5;
+          this.setState({score : this.state.score + 5}, function(){
             console.log(this.state.score);
           });
           this.state.cards.sort(() => Math.random() - 0.5)
